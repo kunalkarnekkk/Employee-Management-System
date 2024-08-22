@@ -1,0 +1,19 @@
+<!-- templates/remove_employee.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Employee</title>
+</head>
+<body>
+    <h1>Remove Employee</h1>
+    <form action="/remove_employee" method="POST">
+        <label for="employee_id">Employee ID:</label>
+        <input type="text" id="employee_id" name="employee_id" required><br>
+        <button type="submit">Remove Employee</button>
+        <a href="/">Cancel</a>
+    </form>
+</body>
+</html>

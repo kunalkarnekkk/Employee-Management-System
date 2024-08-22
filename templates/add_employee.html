@@ -1,0 +1,74 @@
+<!-- templates/add_employee.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <style>
+        body {
+          font-family: Arial, sans-serif;
+          background-color: #f0f0f0;
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background-image: url('/static/analystt.jpg');
+            background-size: cover;
+        }
+    
+        #container {
+          max-width: 400px;
+          padding: 20px;
+          background-color: #fff;
+          border-radius: 8px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          background-color: rgba(255, 255, 255, 1);
+        }
+    
+        button {
+          display: block;
+          width: 100%;
+          padding: 10px;
+          margin-bottom: 10px;
+          border: none;
+          border-radius: 4px;
+          background-color: #4CAF50;
+          color: white;
+          font-size: 16px;
+          cursor: pointer;
+        }
+    
+        button:hover {
+          background-color: #45a049;
+        }
+      </style>
+</head>
+<body>
+    <form>
+        <div id="container">
+            <h2>Add Employee</h2>
+            <a href="/add_employee_page"><button type="button">Add Employee</button></a>
+
+            <h2>Remove Employee</h2>
+            <a href="/remove_employee_page"><button type="button">Remove Employee</button></a>
+
+            <h2>Promote Employee</h2>
+            <a href="/promote_employee_page"><button type="button">Promote Employee</button></a>
+
+            <h2>Display Employee</h2>
+            <a href="/display_employee_page"><button type="button">Display Employee</button></a>
+            
+            <br>
+            <a href="/logout">Logout</a>
+        </div>
+    </form>
+    
+
+    
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!-- display_employee.html  -->
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+</head>
+<body>
+    <h1>Employee Details</h1>
+    <table>
+        <tr>
+            <th>ID</th>
+            <td>{{ employee.id }}</td>
+        </tr>
+        <tr>
+            <th>Name</th>
+            <td>{{ employee.name }}</td>
+        </tr>
+        <tr>
+            <th>Position</th>
+            <td>{{ employee.position }}</td>
+        </tr>
+        <tr>
+            <th>Department</th>
+            <td>{{ employee.department }}</td>
+        </tr>
+    </table>
+</body>
+</html> -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Details</title>
+    <style>
+        /* CSS styles */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url('/static/analystt.jpg');
+           background-size: cover;
+        }
+
+        .container0 {
+            width: 80%;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        p {
+            color: #666;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+        }
+    </style>
+   
+</head>
+<body>
+    <div class="container0">
+        <h1>Employee Details</h1>
+        {% if employee %}
+            <p><b>ID:</b> {{ employee.id }}</p>
+            <p><b>Name:</b> {{ employee.name }}</p>
+            <p><b>Position:</b> {{ employee.position }}</p>
+            <p><b>Department:</b> {{ employee.department }}</p>
+            <!-- Add more details as needed --> 
+        <!-- {% else %}
+            <p>Employee not found</p>
+        {% endif %}
+
+        <a href="/logout">Logout</a>
+    </div> -->
+<!-- 
+</body>
+</html>   --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Employee Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f8f9fa;
+            color: #333;
+            background-image: url('/static/analystt.jpg');
+            background-size: cover;
+        }
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 30px;
+            border-radius: 8px;
+        }
+        h1 {
+            color: #007bff;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        table, th, td {
+            border: 1px solid #dee2e6;
+        }
+        th, td {
+            padding: 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #e9ecef;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        p {
+            text-align: center;
+            font-size: 1.2em;
+            color: #ff0000;
+        }
+        a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            color: #fff;
+            background-color: #007bff;
+            text-decoration: none;
+            border-radius: 4px;
+            text-align: center;
+        }
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        {% if employee %}
+            <h1>Employee in Position: {{ employee[0]['position'] }}</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Name</th>
+                        <th>Position</th>
+                        <th>Department</th>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for emp in employee %}
+                    <tr>
+                        <td>{{ emp.id }}</td>
+                        <td>{{ emp.name }}</td>
+                        <td>{{ emp.position }}</td>
+                        <td>{{emp.department}}</td>
+                        <!-- Add more columns as needed -->
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        {% else %}
+            <p>No employees found for the given position.</p>
+        {% endif %}
+        <a href="/logout">Logout</a>
+    </div>
+</body>
+</html>
+
